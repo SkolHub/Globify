@@ -2,17 +2,16 @@
 
 import '@/lib/fontawesome/css/fa.css';
 import { MapContextProvider } from '@/lib/logic/MapContext';
-import SidePanel from '@/components/side-panel';
-import { data } from '@/lib/data';
+import Map from '@/components/map';
 
 export default function Home() {
   return (
     <>
       {/*<Navbar />*/}
       <MapContextProvider>
-        <main>
-          {/*<Map />*/}
-          <SidePanel data={data} />
+        <main className='overflow-hidden'>
+          <Map />
+          {/*<SidePanel data={data} />*/}
           {/*<LayersDropdown layers={layers} setLayers={setLayers} />*/}
         </main>
       </MapContextProvider>
