@@ -1,7 +1,10 @@
+'use client';
+
 import Globe from 'react-globe.gl';
 import useResizeHook from '@/lib/hooks/useResizeHook';
+import dynamic from 'next/dynamic';
 
-export default function Map() {
+function Map() {
   const [width, height] = useResizeHook();
 
   return (
@@ -13,3 +16,5 @@ export default function Map() {
     />
   );
 }
+
+export default dynamic(() => Promise.resolve(Map), { ssr: false });
