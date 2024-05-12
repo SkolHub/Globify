@@ -1,14 +1,16 @@
 'use client';
 
 import '@/lib/fontawesome/css/fa.css';
-import Map from '@/components/map';
+import dynamic from 'next/dynamic';
+
+const LazyMap = dynamic(() => import('@/components/map'), { ssr: false });
 
 export default function Home() {
   return (
     <>
       {/*<Navbar />*/}
       <main className='overflow-hidden'>
-        <Map />
+        <LazyMap />
         {/*<SidePanel data={data} />*/}
         {/*<LayersDropdown layers={layers} setLayers={setLayers} />*/}
       </main>

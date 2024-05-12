@@ -2,7 +2,6 @@
 
 import Globe from 'react-globe.gl';
 import useResizeHook from '@/lib/hooks/useResizeHook';
-import dynamic from 'next/dynamic';
 
 function Map() {
   const [width, height] = useResizeHook();
@@ -17,8 +16,4 @@ function Map() {
   );
 }
 
-const X = dynamic(() => Promise.resolve(Map), { ssr: false });
-
-export default () => {
-  return <X />;
-};
+export default Map;
