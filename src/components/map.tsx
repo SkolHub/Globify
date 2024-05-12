@@ -20,21 +20,29 @@ export default function Map() {
     const ctx = map.getContext('2d')!;
 
     let moving = false;
-    let zoom = 1;
+    let zoom = 2;
 
     const origin = createPoint();
 
     function onMouseDown(e: MouseEvent) {
-      const point = getClick(e, pointDilation);
+      if (e.button === 1) {
+        const point = getClick(e, pointDilation);
 
-      origin.x = point.x;
-      origin.y = point.y;
+        origin.x = point.x;
+        origin.y = point.y;
 
-      moving = true;
+        moving = true;
+      }
     }
 
-    function onMouseUp() {
-      moving = false;
+    function onTouchStart(e: TouchEvent) {
+      console.log(e);
+    }
+
+    function onMouseUp(e: MouseEvent) {
+      if (e.button === 1) {
+        moving = false;
+      }
     }
 
     function onMouseMove(e: MouseEvent) {
@@ -43,6 +51,14 @@ export default function Map() {
 
         pointDilation.x -= origin.x - point.x;
         pointDilation.y -= origin.y - point.y;
+
+        if (pointDilation.x > 100) {
+          pointDilation.x = 100;
+        }
+
+        if (pointDilation.y > 100) {
+          pointDilation.y = 100;
+        }
 
         render();
       }
@@ -64,10 +80,9 @@ export default function Map() {
     }
 
     function onScroll(e: WheelEvent) {
-      pointDilation.x += e.deltaX / 20;
-      pointDilation.y += e.deltaY / 20;
-
-      zoom -= e.deltaY / 1000;
+      if (zoom - e.deltaY / 1000 >= 0.8) {
+        zoom -= e.deltaY / 1000;
+      }
 
       render();
     }
@@ -117,18 +132,20 @@ export default function Map() {
 
     onResize();
 
-    window.addEventListener('mousedown', onMouseDown);
+    map.addEventListener('mousedown', onMouseDown);
+    map.addEventListener('touchstart', onTouchStart);
     window.addEventListener('mouseup', onMouseUp);
     window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('wheel', onScroll);
+    map.addEventListener('wheel', onScroll);
 
     window.addEventListener('resize', onResize);
 
     return () => {
-      window.removeEventListener('mousedown', onMouseDown);
+      map.removeEventListener('mousedown', onMouseDown);
+      map.removeEventListener('touchstart', onTouchStart);
       window.removeEventListener('mouseup', onMouseUp);
       window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('wheel', onScroll);
+      map.removeEventListener('wheel', onScroll);
 
       window.removeEventListener('resize', onResize);
     };

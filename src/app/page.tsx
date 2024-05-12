@@ -1,8 +1,9 @@
 'use client';
 
 import '@/lib/fontawesome/css/fa.css';
-import Map from '@/components/map';
 import { MapContextProvider } from '@/lib/logic/MapContext';
+import SidePanel from '@/components/side-panel';
+import { data } from '@/lib/data';
 
 export default function Home() {
   return (
@@ -10,9 +11,9 @@ export default function Home() {
       {/*<Navbar />*/}
       <MapContextProvider>
         <main>
-          <Map />
-          {/*<SidePanel open={open} />
-        <LayersDropdown layers={layers} setLayers={setLayers} />*/}
+          {/*<Map />*/}
+          <SidePanel data={data} />
+          {/*<LayersDropdown layers={layers} setLayers={setLayers} />*/}
         </main>
       </MapContextProvider>
     </>

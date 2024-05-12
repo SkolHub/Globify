@@ -1,16 +1,14 @@
 import { cn } from '@/lib/utils';
 import InformationCard from '@/components/information-card';
 import { Region } from '@/lib/types';
+import { useState } from 'react';
 
 export default function SidePanel({
-  open,
-  setOpen,
   data
 }: {
-  open: boolean;
-  setOpen: (open: boolean) => void;
   data: Region;
 }) {
+  const [open, setOpen] = useState<boolean>(true);
 
   return (
     <div
@@ -22,7 +20,7 @@ export default function SidePanel({
       <div className='flex w-6 items-center justify-center'>
         <i
           onClick={() => setOpen(false)}
-          className='fa-solid fa-chevron-right cursor-pointer p-2 pl-6 text-2xl text-neutral-400 hover:text-neutral-900'
+          className='fa-solid fa-chevron-right scale-x-[.5] cursor-pointer p-2 pl-6 text-[3rem] text-neutral-400 hover:text-neutral-900'
         ></i>
       </div>
       <div className='w-[550px] overflow-y-auto px-4 py-8'>
@@ -92,7 +90,7 @@ export default function SidePanel({
           </p>
           <div className='flex flex-wrap pt-4'>
             {data.vegetation.photos.map((photo, index) => (
-              <div key={index} className='shrink grow basis-1/2 p-2'>
+              <div key={index} className='grow basis-0 p-2'>
                 <img
                   src={photo.src}
                   alt={photo.title}
