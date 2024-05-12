@@ -17,4 +17,8 @@ function Map() {
   );
 }
 
-export default dynamic(() => Promise.resolve(Map), { ssr: false });
+const X = dynamic(() => Promise.resolve(Map), { ssr: false });
+
+export default () => {
+  return <X />;
+};
