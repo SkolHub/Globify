@@ -12,6 +12,10 @@ const goldplay = localFont({
   ],
   variable: '--font-goldplay'
 });
+const eudoxus = localFont({
+  src: [{ path: '../fonts/EudoxusSansGX.ttf', style: 'normal' }],
+  variable: '--font-eudoxus'
+});
 
 export const metadata: Metadata = {
   title: 'Globify',
@@ -25,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} ${goldplay.variable}`}>{children}</body>
+      <body className={`${eudoxus.className}`}>{children}</body>
     </html>
   );
 }

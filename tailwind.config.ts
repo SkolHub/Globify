@@ -22,6 +22,7 @@ const config = {
         goldplay: ['var(--font-goldplay)']
       },
       colors: {
+        primary: '#c5c5c5',
         'very-low': '#607EE9',
         low: '#60C8E9',
         medium: '#56DC8B',

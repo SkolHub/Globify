@@ -1,63 +1,26 @@
-export interface precipitationItem {
-	color: string;
-	text: string;
-}
+export type SidebarData = {
+  title: string;
+  subtitle?: string;
+  categories: Category[];
+};
 
-export interface zoneItem {
-	color: string;
-	text: string;
-}
-
-export interface temperatureItem {
-	color: string;
-	text: string;
-}
-
-export interface positionItem {
-	characteristicRegions: string;
-	position: string;
-}
-
-export interface climateItem {
-	precipitation: precipitationItem;
-	temperature: temperatureItem;
-	climate: string;
-	termicAmplitude: termicAmplitudeItem;
-	wind: string;
-}
-
-export interface termicAmplitudeItem {
-	color: string;
-	text: string;
-}
-
-export interface photosItem {
-	src: string;
-	title?: string;
-}
-
-export interface vegetationItem {
-	text: string;
-	photos: Array<photosItem>;
-}
-
-export interface faunaItem {
-	text: string;
-	photos: Array<photosItem>;
-}
-
-export interface soilItem {
-	text: string;
-	photos: Array<photosItem>;
-}
-
-export interface Region {
-	zone: zoneItem;
-	fauna: faunaItem;
-	vegetation: vegetationItem;
-	soil: soilItem;
-	position: positionItem;
-	climate: climateItem;
-	title: string;
-}
-
+export type Category =
+  | {
+      'content-type': 'items';
+      title: string;
+      items: {
+        title: string;
+        icon: string;
+        text: string;
+        'text-color': string;
+      }[];
+    }
+  | {
+      'content-type': 'text';
+      title: string;
+      text: string;
+      images: {
+        src: string;
+        title: string;
+      }[];
+    };
