@@ -2,11 +2,13 @@
 
 import '@/lib/fontawesome/css/fa.css';
 import Map from '@/components/map';
-import { MapContextProvider } from '@/lib/logic/MapContext';
 import LayersDropdown from '@/components/layers-dropdown';
 import SidePanel from '@/components/side-panel';
 import { useState } from 'react';
 import { SidebarData } from '@/lib/types';
+import dynamic from 'next/dynamic';
+
+const LazyMap = dynamic(() => import('@/components/map'), { ssr: false });
 
 export default function Home() {
   const [open, setOpen] = useState(true);
@@ -124,13 +126,11 @@ export default function Home() {
   return (
     <>
       {/*<Navbar />*/}
-      <MapContextProvider>
-        <main>
-          <Map />
-          <SidePanel open={open} data={data} setOpen={setOpen} />
-          <LayersDropdown layers={layers} setLayers={setLayers} />
-        </main>
-      </MapContextProvider>
+      <main>
+        <LazyMap />
+        <SidePanel open={open} data={data} setOpen={setOpen} />
+        <LayersDropdown layers={layers} setLayers={setLayers} />
+      </main>
     </>
   );
 }
