@@ -15,7 +15,7 @@ export default function LayersDropdown({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className='fixed bottom-4 left-4 flex items-center justify-center gap-2 rounded-2xl bg-white/50 px-4 py-3 text-[0.875rem] font-medium text-neutral-600 shadow-[0_0_20px_-6px_rgba(0,0,0,0.25)] backdrop-blur-2xl focus:outline-0 active:bg-neutral-400/70'>
+        <button className='text-primary fixed bottom-4 left-4 flex items-center justify-center gap-2 rounded-2xl bg-[#2e2e2e]/50 px-4 py-3 text-[0.875rem] font-medium shadow-[0_0_20px_-6px_rgba(0,0,0,0.25)] backdrop-blur-2xl focus:outline-0 active:bg-neutral-400/70'>
           <i className='fa fa-layer-group text-2xl'></i>
           Straturi
         </button>
@@ -32,10 +32,8 @@ export default function LayersDropdown({
           }}
         >
           <div className='flex items-center justify-start gap-2'>
-            <i className='fa fa-sun-cloud text-lg text-neutral-600'></i>
-            <label className='text-sm font-medium text-neutral-600'>
-              Clima
-            </label>
+            <i className='fa fa-sun-cloud text-primary text-lg'></i>
+            <label className='text-primary text-sm font-medium'>Clima</label>
           </div>
         </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem
@@ -49,8 +47,8 @@ export default function LayersDropdown({
           }}
         >
           <div className='flex items-center justify-start gap-2'>
-            <i className='fa fa-leaf text-lg text-neutral-600'></i>
-            <label className='text-sm font-medium text-neutral-600'>
+            <i className='fa fa-leaf text-primary text-lg'></i>
+            <label className='text-primary text-sm font-medium'>
               Vegetatie
             </label>
           </div>
@@ -66,8 +64,8 @@ export default function LayersDropdown({
           }}
         >
           <div className='flex items-center justify-start gap-2'>
-            <i className='fa fa-water text-lg text-neutral-600'></i>
-            <label className='text-sm font-medium text-neutral-600'>
+            <i className='fa fa-water text-primary text-lg'></i>
+            <label className='text-primary text-sm font-medium'>
               Hidrografie
             </label>
           </div>
@@ -83,10 +81,8 @@ export default function LayersDropdown({
           }}
         >
           <div className='flex items-center justify-start gap-2'>
-            <i className='fa fa-mountain text-lg text-neutral-600'></i>
-            <label className='text-sm font-medium text-neutral-600'>
-              Relief
-            </label>
+            <i className='fa fa-mountain text-primary text-lg'></i>
+            <label className='text-primary text-sm font-medium'>Relief</label>
           </div>
         </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem
@@ -100,8 +96,8 @@ export default function LayersDropdown({
           }}
         >
           <div className='flex items-center justify-start gap-2'>
-            <i className='fa fa-earth text-lg text-neutral-600'></i>
-            <label className='text-sm font-medium text-neutral-600'>
+            <i className='fa fa-earth text-primary text-lg'></i>
+            <label className='text-primary text-sm font-medium'>
               Placi tectonice
             </label>
           </div>
