@@ -284,7 +284,8 @@
       console.log(Object.values(cPaths).map((val, index) => ({
           type: 'feature',
           properties: {
-            fill: colors[index]
+            fill: colors[index],
+            elevation: 0.01
           },
           geometry: {
             type: 'MultiPolygon',
