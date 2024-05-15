@@ -70,7 +70,7 @@ export default function LayersDropdown({
             </label>
           </div>
         </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem
+        {/*<DropdownMenuCheckboxItem
           checked={layers.includes('relief')}
           onCheckedChange={(checked) => {
             setLayers(
@@ -84,8 +84,8 @@ export default function LayersDropdown({
             <i className='fa fa-mountain text-primary text-lg'></i>
             <label className='text-primary text-sm font-medium'>Relief</label>
           </div>
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem
+        </DropdownMenuCheckboxItem>*/}
+        {/*<DropdownMenuCheckboxItem
           checked={layers.includes('placi tectonice')}
           onCheckedChange={(checked) => {
             setLayers(
@@ -101,7 +101,7 @@ export default function LayersDropdown({
               Placi tectonice
             </label>
           </div>
-        </DropdownMenuCheckboxItem>
+        </DropdownMenuCheckboxItem>*/}
       </DropdownMenuContent>
     </DropdownMenu>
   );

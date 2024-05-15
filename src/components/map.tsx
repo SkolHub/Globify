@@ -8,18 +8,25 @@ import hidrografie from '@/lib/data/rivers.json';
 import { useState } from 'react';
 import { dataFauna, dataFluvii } from '../../data';
 
-const maps: any = {clima: 'earth-blue-marble.jpg', vegetatie: 'lunar_surface.jpg', hidrografie: 'night.png'};
+const maps: any = {
+  clima: 'earth-blue-marble.jpg',
+  vegetatie: 'lunar_surface.jpg',
+  hidrografie: 'night.png'
+};
 
 function Map({ layers, map, setData, setOpen }: any) {
   const [width, height] = useResizeHook();
 
   const [hoveredP, setHoveredP] = useState<object | null>(null);
 
-  const x = [
-    ...(layers.includes('vegetatie') ? (fauna as any[]) : []),
-    ...(layers.includes('clima') ? (climate as any[]) : []),
-    ...(layers.includes('hidrografie') ? (hidrografie as any[]) : [])
-  ];
+  const x =
+    map !== 'vegetatie'
+      ? [
+          ...(layers.includes('vegetatie') ? (fauna as any[]) : []),
+          ...(layers.includes('clima') ? (climate as any[]) : []),
+          ...(layers.includes('hidrografie') ? (hidrografie as any[]) : [])
+        ]
+      : [];
 
   return (
     <Globe
