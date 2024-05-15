@@ -34,7 +34,7 @@ const paduri_tropicale_umede: SidebarData = {
         },
         {
           title: 'Temperaturi',
-          icon: 'thermometer',
+          icon: 'temperature-three-quarters',
           text: '20°-25°C',
           'text-color': 'text-very-high'
         },
@@ -46,7 +46,7 @@ const paduri_tropicale_umede: SidebarData = {
         },
         {
           title: 'Amplitudini termice anuale',
-          icon: 'temperature',
+          icon: 'temperature-arrow-up',
           text: 'foarte mici, ~5°C',
           'text-color': 'text-danger'
         },
@@ -132,7 +132,7 @@ const paduri_ecuatoriale: SidebarData = {
         },
         {
           title: 'Temperaturi',
-          icon: 'thermometer',
+          icon: 'temperature-three-quarters',
           text: 'constantă, 25-27°C',
           'text-color': 'text-very-high'
         },
@@ -144,7 +144,7 @@ const paduri_ecuatoriale: SidebarData = {
         },
         {
           title: 'Amplitudini termice anuale',
-          icon: 'temperature',
+          icon: 'temperature-arrow-up',
           text: 'foarte mici',
           'text-color': 'text-danger'
         },
@@ -231,7 +231,7 @@ const paduri_ecuatoriale: SidebarData = {
       text: 'Laterite - sărace în humus fertilitate redusă, bogate în oxizi de fier.',
       images: [
         {
-          src: '/images/paduri-ecuatoriale-13.jpg',
+          src: '/images/paduri-ecuatoriale/13.jpg',
           title: 'Soluri laterite'
         }
       ]
@@ -273,7 +273,7 @@ const savana: SidebarData = {
         },
         {
           title: 'Temperaturi',
-          icon: 'thermometer',
+          icon: 'temperature-three-quarters',
           text: '20°-28°C',
           'text-color': 'text-very-high'
         },
@@ -366,7 +366,7 @@ const deserturi_si_semideserturi: SidebarData = {
         },
         {
           title: 'Amplitudini termice diurne',
-          icon: 'temperature',
+          icon: 'temperature-arrow-up',
           text: 'mari',
           'text-color': 'text-very-high'
         },
@@ -470,13 +470,13 @@ const paduri_de_conifere: SidebarData = {
         },
         {
           title: 'Temperaturi',
-          icon: 'thermometer',
+          icon: 'temperature-three-quarters',
           text: '5°-10°C',
           'text-color': 'text-low'
         },
         {
           title: 'Amplitudini termice anuale',
-          icon: 'temperature',
+          icon: 'temperature-arrow-up',
           text: 'mari 20°-25°C',
           'text-color': 'text-very-high'
         },
@@ -588,13 +588,13 @@ const paduri_de_foioase: SidebarData = {
         },
         {
           title: 'Temperaturi',
-          icon: 'thermometer',
+          icon: 'temperature-three-quarters',
           text: '10°-12°C',
           'text-color': 'text-low'
         },
         {
           title: 'Amplitudini termice anuale',
-          icon: 'temperature',
+          icon: 'temperature-arrow-up',
           text: 'mari 10°-15°C',
           'text-color': 'text-very-high'
         },
@@ -689,13 +689,13 @@ const zona_de_stepa: SidebarData = {
         },
         {
           title: 'Temperaturi',
-          icon: 'thermometer',
+          icon: 'temperature-three-quarters',
           text: '5°-10°C',
           'text-color': 'text-low'
         },
         {
           title: 'Amplitudini termice anuale',
-          icon: 'temperature',
+          icon: 'temperature-arrow-up',
           text: 'mari 15°-20°C',
           'text-color': 'text-very-high'
         },
@@ -799,13 +799,13 @@ const vegetatia_subtropicala: SidebarData = {
         },
         {
           title: 'Temperaturi',
-          icon: 'thermometer',
+          icon: 'temperature-three-quarters',
           text: '15°-17°C',
           'text-color': 'text-low'
         },
         {
           title: 'Amplitudini termice anuale',
-          icon: 'temperature',
+          icon: 'temperature-arrow-up',
           text: 'reduse ~10°C',
           'text-color': 'text-medium'
         },
@@ -911,7 +911,7 @@ const ghetari: SidebarData = {
         },
         {
           title: 'Temperaturi',
-          icon: 'thermometer',
+          icon: 'temperature-three-quarters',
           text: 'negative tot timpul anului',
           'text-color': 'text-low'
         },
@@ -977,13 +977,13 @@ const tundra: SidebarData = {
         },
         {
           title: 'Temperaturi',
-          icon: 'thermometer',
+          icon: 'temperature-three-quarters',
           text: '0°-5°C',
           'text-color': 'text-low'
         },
         {
           title: 'Amplitudini termice anuale',
-          icon: 'temperature',
+          icon: 'temperature-arrow-up',
           text: 'mari',
           'text-color': 'text-high'
         },
@@ -1075,7 +1075,7 @@ const vegetatie_alpina: SidebarData = {
         },
         {
           title: 'Temperaturi',
-          icon: 'thermometer',
+          icon: 'temperature-three-quarters',
           text: '0°-4°C',
           'text-color': 'text-low'
         },
@@ -1185,18 +1185,18 @@ const mississippi: SidebarData = {
           'text-color': 'text-primary'
         }
       ]
-    },
-    {
-      title: 'Imagini',
-      'content-type': 'text',
-      text: '',
-      images: [
-        // {
-        //   src: '/images/mississippi/1.jpg',
-        //   title: ''
-        // }
-      ]
     }
+    // {
+    //   title: 'Imagini',
+    //   'content-type': 'text',
+    //   text: '',
+    //   images: [
+    //     // {
+    //     //   src: '/images/mississippi/1.jpg',
+    //     //   title: ''
+    //     // }
+    //   ]
+    // }
   ]
 };
 
@@ -1232,18 +1232,18 @@ const nile: SidebarData = {
           'text-color': 'text-primary'
         }
       ]
-    },
-    {
-      title: 'Imagini',
-      'content-type': 'text',
-      text: '',
-      images: [
-        // {
-        //   src: '/images/nile/1.jpg',
-        //   title: ''
-        // }
-      ]
     }
+    // {
+    //   title: 'Imagini',
+    //   'content-type': 'text',
+    //   text: '',
+    //   images: [
+    //     // {
+    //     //   src: '/images/nile/1.jpg',
+    //     //   title: ''
+    //     // }
+    //   ]
+    // }
   ]
 };
 
@@ -1279,18 +1279,18 @@ const amazon: SidebarData = {
           'text-color': 'text-primary'
         }
       ]
-    },
-    {
-      title: 'Imagini',
-      'content-type': 'text',
-      text: '',
-      images: [
-        // {
-        //   src: '/images/amazon/1.jpg',
-        //   title: ''
-        // }
-      ]
     }
+    // {
+    //   title: 'Imagini',
+    //   'content-type': 'text',
+    //   text: '',
+    //   images: [
+    //     // {
+    //     //   src: '/images/amazon/1.jpg',
+    //     //   title: ''
+    //     // }
+    //   ]
+    // }
   ]
 };
 
@@ -1326,18 +1326,18 @@ const dunarea: SidebarData = {
           'text-color': 'text-primary'
         }
       ]
-    },
-    {
-      title: 'Imagini',
-      'content-type': 'text',
-      text: '',
-      images: [
-        // {
-        //   src: '/images/dunarea/1.jpg',
-        //   title: ''
-        // }
-      ]
     }
+    // {
+    //   title: 'Imagini',
+    //   'content-type': 'text',
+    //   text: '',
+    //   images: [
+    // {
+    //   src: '/images/dunarea/1.jpg',
+    //   title: ''
+    // }
+    //   ]
+    // }
   ]
 };
 
@@ -1373,18 +1373,18 @@ const congo: SidebarData = {
           'text-color': 'text-primary'
         }
       ]
-    },
-    {
-      title: 'Imagini',
-      'content-type': 'text',
-      text: '',
-      images: [
-        // {
-        //   src: '/images/congo/1.jpg',
-        //   title: ''
-        // }
-      ]
     }
+    // {
+    //   title: 'Imagini',
+    //   'content-type': 'text',
+    //   text: '',
+    //   images: [
+    //     // {
+    //     //   src: '/images/congo/1.jpg',
+    //     //   title: ''
+    //     // }
+    //   ]
+    // }
   ]
 };
 
@@ -1420,18 +1420,18 @@ const volga: SidebarData = {
           'text-color': 'text-primary'
         }
       ]
-    },
-    {
-      title: 'Imagini',
-      'content-type': 'text',
-      text: '',
-      images: [
-        // {
-        //   src: '/images/volga/1.jpg',
-        //   title: ''
-        // }
-      ]
     }
+    // {
+    //   title: 'Imagini',
+    //   'content-type': 'text',
+    //   text: '',
+    //   images: [
+    //     // {
+    //     //   src: '/images/volga/1.jpg',
+    //     //   title: ''
+    //     // }
+    //   ]
+    // }
   ]
 };
 
@@ -1467,18 +1467,18 @@ const gange: SidebarData = {
           'text-color': 'text-primary'
         }
       ]
-    },
-    {
-      title: 'Imagini',
-      'content-type': 'text',
-      text: '',
-      images: [
-        // {
-        //   src: '/images/gange/1.jpg',
-        //   title: ''
-        // }
-      ]
     }
+    // {
+    //   title: 'Imagini',
+    //   'content-type': 'text',
+    //   text: '',
+    //   images: [
+    //     // {
+    //     //   src: '/images/gange/1.jpg',
+    //     //   title: ''
+    //     // }
+    //   ]
+    // }
   ]
 };
 
@@ -1514,22 +1514,25 @@ const yangtze: SidebarData = {
           'text-color': 'text-primary'
         }
       ]
-    },
-    {
-      title: 'Imagini',
-      'content-type': 'text',
-      text: '',
-      images: [
-        // {
-        //   src: '/images/yangtze/1.jpg',
-        //   title: ''
-        // }
-      ]
     }
+    // {
+    //   title: 'Imagini',
+    //   'content-type': 'text',
+    //   text: '',
+    //   images: [
+    //     // {
+    //     //   src: '/images/yangtze/1.jpg',
+    //     //   title: ''
+    //     // }
+    //   ]
+    // }
   ]
 };
 
 export {
+  paduri_ecuatoriale,
+  paduri_tropicale_umede,
+  savana,
   deserturi_si_semideserturi,
   paduri_de_conifere,
   paduri_de_foioase,
