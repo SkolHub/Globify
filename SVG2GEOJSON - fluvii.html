@@ -81,20 +81,17 @@
           } else {
             subPaths.push(points);
           }
-
-          
         }
 
         cPaths.push(subPaths);
       }
 
-      
-
       console.log(cPaths.map((val, index) => ({
           type: 'feature',
           properties: {
             fill: '#060C48',
-            elevation: 0.02
+            elevation: 0.03,
+            index: index
           },
           geometry: {
             type: 'Polygon',

@@ -1529,6 +1529,32 @@ const yangtze: SidebarData = {
   ]
 };
 
+export const dataFauna: SidebarData[] = [
+  vegetatie_alpina,
+  ghetari,
+  tundra,
+  paduri_de_conifere,
+  paduri_de_foioase,
+  zona_de_stepa,
+  vegetatia_subtropicala,
+  paduri_tropicale_umede,
+  paduri_ecuatoriale,
+  savana,
+  deserturi_si_semideserturi,
+  deserturi_si_semideserturi
+];
+
+export const dataFluvii: SidebarData[] = [
+  yangtze,
+  gange,
+  volga,
+  nile,
+  amazon,
+  mississippi,
+  dunarea,
+  congo
+];
+
 export {
   paduri_ecuatoriale,
   paduri_tropicale_umede,

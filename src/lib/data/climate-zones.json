@@ -3,7 +3,8 @@
     "type": "feature",
     "properties": {
       "fill": "#515242",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 0
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -11867,7 +11868,8 @@
     "type": "feature",
     "properties": {
       "fill": "#0023D4",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 1
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -25415,7 +25417,8 @@
     "type": "feature",
     "properties": {
       "fill": "#008ECC",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 2
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -37551,7 +37554,8 @@
     "type": "feature",
     "properties": {
       "fill": "#FEE0A4",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 3
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -45813,7 +45817,8 @@
     "type": "feature",
     "properties": {
       "fill": "#01C2D1",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 4
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -51773,7 +51778,8 @@
     "type": "feature",
     "properties": {
       "fill": "#38DE18",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 5
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -64633,7 +64639,8 @@
     "type": "feature",
     "properties": {
       "fill": "#319571",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 6
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -69405,7 +69412,8 @@
     "type": "feature",
     "properties": {
       "fill": "#CE681D",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 7
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -74025,7 +74033,8 @@
     "type": "feature",
     "properties": {
       "fill": "#E5AD7E",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 8
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -79909,7 +79918,8 @@
     "type": "feature",
     "properties": {
       "fill": "#FEBD53",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 9
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -82745,7 +82755,8 @@
     "type": "feature",
     "properties": {
       "fill": "#FEF23A",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 10
     },
     "geometry": {
       "type": "MultiPolygon",
@@ -90285,7 +90296,8 @@
     "type": "feature",
     "properties": {
       "fill": "#EFCCAE",
-      "elevation": 0.01
+      "elevation": 0.01,
+      "index": 11
     },
     "geometry": {
       "type": "MultiPolygon",

@@ -3,7 +3,8 @@
     "type": "feature",
     "properties": {
       "fill": "#060C48",
-      "elevation": 0.02
+      "elevation": 0.03,
+      "index": 0
     },
     "geometry": {
       "type": "Polygon",
@@ -685,7 +686,8 @@
     "type": "feature",
     "properties": {
       "fill": "#060C48",
-      "elevation": 0.02
+      "elevation": 0.03,
+      "index": 1
     },
     "geometry": {
       "type": "Polygon",
@@ -1051,7 +1053,8 @@
     "type": "feature",
     "properties": {
       "fill": "#060C48",
-      "elevation": 0.02
+      "elevation": 0.03,
+      "index": 2
     },
     "geometry": {
       "type": "Polygon",
@@ -1693,7 +1696,8 @@
     "type": "feature",
     "properties": {
       "fill": "#060C48",
-      "elevation": 0.02
+      "elevation": 0.03,
+      "index": 3
     },
     "geometry": {
       "type": "Polygon",
@@ -2847,7 +2851,8 @@
     "type": "feature",
     "properties": {
       "fill": "#060C48",
-      "elevation": 0.02
+      "elevation": 0.03,
+      "index": 4
     },
     "geometry": {
       "type": "Polygon",
@@ -3673,7 +3678,8 @@
     "type": "feature",
     "properties": {
       "fill": "#060C48",
-      "elevation": 0.02
+      "elevation": 0.03,
+      "index": 5
     },
     "geometry": {
       "type": "Polygon",
@@ -4155,7 +4161,8 @@
     "type": "feature",
     "properties": {
       "fill": "#060C48",
-      "elevation": 0.02
+      "elevation": 0.03,
+      "index": 6
     },
     "geometry": {
       "type": "Polygon",
@@ -4641,7 +4648,8 @@
     "type": "feature",
     "properties": {
       "fill": "#060C48",
-      "elevation": 0.02
+      "elevation": 0.03,
+      "index": 7
     },
     "geometry": {
       "type": "Polygon",
