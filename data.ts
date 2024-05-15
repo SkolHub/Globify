@@ -1174,7 +1174,7 @@ const mississippi: SidebarData = {
         },
         {
           title: 'Bazin hidrologic',
-          icon: 'arrows-maximise',
+          icon: 'arrows-maximize',
           text: '2,980,000 km2',
           'text-color': 'text-primary'
         },
@@ -1221,7 +1221,7 @@ const nile: SidebarData = {
         },
         {
           title: 'Bazin hidrologic',
-          icon: 'arrows-maximise',
+          icon: 'arrows-maximize',
           text: '3,340,877 km2',
           'text-color': 'text-primary'
         },
@@ -1268,7 +1268,7 @@ const amazon: SidebarData = {
         },
         {
           title: 'Bazin hidrologic',
-          icon: 'arrows-maximise',
+          icon: 'arrows-maximize',
           text: '5,941,000 km2',
           'text-color': 'text-primary'
         },
@@ -1315,7 +1315,7 @@ const dunarea: SidebarData = {
         },
         {
           title: 'Bazin hidrologic',
-          icon: 'arrows-maximise',
+          icon: 'arrows-maximize',
           text: '797,335 km2',
           'text-color': 'text-primary'
         },
@@ -1362,7 +1362,7 @@ const congo: SidebarData = {
         },
         {
           title: 'Bazin hidrologic',
-          icon: 'arrows-maximise',
+          icon: 'arrows-maximize',
           text: '3,689,187 km2',
           'text-color': 'text-primary'
         },
@@ -1409,7 +1409,7 @@ const volga: SidebarData = {
         },
         {
           title: 'Bazin hidrologic',
-          icon: 'arrows-maximise',
+          icon: 'arrows-maximize',
           text: '1,431,107 km2',
           'text-color': 'text-primary'
         },
@@ -1456,7 +1456,7 @@ const gange: SidebarData = {
         },
         {
           title: 'Bazin hidrologic',
-          icon: 'arrows-maximise',
+          icon: 'arrows-maximize',
           text: '1,004,724 km2',
           'text-color': 'text-primary'
         },
@@ -1503,7 +1503,7 @@ const yangtze: SidebarData = {
         },
         {
           title: 'Bazin hidrologic',
-          icon: 'arrows-maximise',
+          icon: 'arrows-maximize',
           text: '1,746,195 km2',
           'text-color': 'text-primary'
         },
