@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import InformationCard from '@/components/information-card';
 import { SidebarData } from '@/lib/types';
 
-export default function SidePanel({
+export default function ({
   open,
   setOpen,
   data
@@ -14,17 +14,24 @@ export default function SidePanel({
   return (
     <div
       className={cn(
-        'fixed right-0 top-4 mr-4 flex h-[calc(100%-2rem)] rounded-3xl bg-[#2E2E2E]/70 shadow-[0_0_20px_-6px_rgba(0,0,0,0.25)] backdrop-blur-2xl transition-transform duration-200',
-        open ? 'translate-x-0' : 'translate-x-[200%]'
+        'fixed right-auto top-40 mx-2 flex h-[calc(100%-10rem)] flex-col rounded-b-none rounded-t-3xl bg-[#2E2E2E]/70 shadow-[0_0_20px_-6px_rgba(0,0,0,0.25)] backdrop-blur-2xl transition-transform duration-200 md:right-0 md:top-4 md:mx-4 md:h-[calc(100%-2rem)] md:w-auto md:flex-row md:rounded-3xl',
+        open
+          ? 'translate-y-0 md:translate-x-0'
+          : 'translate-x-0 translate-y-[200%] md:translate-x-[200%] md:translate-y-0'
       )}
     >
-      <div className='flex w-6 items-center justify-center'>
-        <i
-          onClick={() => setOpen(false)}
-          className='fa-solid fa-chevron-right cursor-pointer p-2 pl-6 text-2xl text-neutral-400 hover:text-neutral-900'
-        ></i>
+      <div className='flex items-center justify-center'>
+        <span
+          className='cursor-pointer p-2 pl-2 text-2xl text-neutral-400 hover:text-neutral-900 md:pl-6'
+          onClick={() => {
+            setOpen(false);
+          }}
+        >
+          <i className='fa fa-chevron-right !hidden md:!block' />
+          <i className='fa fa-chevron-up !block md:!hidden' />
+        </span>
       </div>
-      <div className='w-[550px] overflow-y-auto px-4 py-8'>
+      <div className='w-full overflow-y-auto px-4 py-8 md:w-[550px]'>
         <h1 className='pb-1 text-4xl font-black text-neutral-300'>
           {data.title}
         </h1>
@@ -61,27 +68,26 @@ export default function SidePanel({
                 </div>
               </div>
             );
-          } else {
-            return (
-              <div key={index} className='mt-4 flex flex-col gap-4'>
-                <h3 className='text-2xl font-black text-neutral-300'>
-                  {category.title}
-                </h3>
-                <div className='grid grid-cols-2 gap-y-8'>
-                  {category.items.map((item, index) => (
-                    <InformationCard
-                      key={index}
-                      title={item.title}
-                      description={item.text}
-                      icon={item.icon}
-                      textClassName={item['text-color']}
-                      border={index % 2 === 0}
-                    />
-                  ))}
-                </div>
-              </div>
-            );
           }
+          return (
+            <div key={index} className='mt-4 flex flex-col gap-4'>
+              <h3 className='text-2xl font-black text-neutral-300'>
+                {category.title}
+              </h3>
+              <div className='grid grid-cols-2 gap-y-8'>
+                {category.items.map((item, index) => (
+                  <InformationCard
+                    key={index}
+                    title={item.title}
+                    description={item.text}
+                    icon={item.icon}
+                    textClassName={item['text-color']}
+                    border={index % 2 === 0}
+                  />
+                ))}
+              </div>
+            </div>
+          );
         })}
       </div>
     </div>

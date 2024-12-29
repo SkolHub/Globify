@@ -4,104 +4,44 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
+import { layers } from '@/lib/data/layers';
 
 export default function LayersDropdown({
-  layers,
-  setLayers
+  selectedLayers,
+  setSelectedLayers
 }: {
-  layers: string[];
-  setLayers: (layers: string[]) => void;
+  selectedLayers: string[];
+  setSelectedLayers: (layers: string[]) => void;
 }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className='text-primary fixed bottom-4 left-4 flex items-center justify-center gap-2 rounded-2xl bg-[#2e2e2e]/50 px-4 py-3 text-[0.875rem] font-medium shadow-[0_0_20px_-6px_rgba(0,0,0,0.25)] backdrop-blur-2xl focus:outline-0 active:bg-neutral-400/70'>
-          <i className='fa fa-layer-group text-2xl'></i>
-          Straturi
+        <button className='fixed bottom-auto left-4 top-4 flex items-center justify-center gap-2 rounded-2xl bg-[#2e2e2e]/50 px-4 py-3 text-[0.875rem] font-medium text-primary shadow-[0_0_20px_-6px_rgba(0,0,0,0.25)] backdrop-blur-2xl focus:outline-0 active:bg-neutral-400/70 md:bottom-4 md:top-auto'>
+          <i className='fa fa-layer-group text-2xl' />
+          Layers
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='start' sideOffset={10}>
-        <DropdownMenuCheckboxItem
-          checked={layers.includes('clima')}
-          onCheckedChange={(checked) => {
-            setLayers(
-              checked
-                ? [...layers, 'clima']
-                : layers.filter((layer) => layer !== 'clima')
-            );
-          }}
-        >
-          <div className='flex items-center justify-start gap-2'>
-            <i className='fa fa-sun-cloud text-primary text-lg'></i>
-            <label className='text-primary text-sm font-medium'>Clima</label>
-          </div>
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem
-          checked={layers.includes('vegetatie')}
-          onCheckedChange={(checked) => {
-            setLayers(
-              checked
-                ? [...layers, 'vegetatie']
-                : layers.filter((layer) => layer !== 'vegetatie')
-            );
-          }}
-        >
-          <div className='flex items-center justify-start gap-2'>
-            <i className='fa fa-leaf text-primary text-lg'></i>
-            <label className='text-primary text-sm font-medium'>
-              Vegetatie
-            </label>
-          </div>
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem
-          checked={layers.includes('hidrografie')}
-          onCheckedChange={(checked) => {
-            setLayers(
-              checked
-                ? [...layers, 'hidrografie']
-                : layers.filter((layer) => layer !== 'hidrografie')
-            );
-          }}
-        >
-          <div className='flex items-center justify-start gap-2'>
-            <i className='fa fa-water text-primary text-lg'></i>
-            <label className='text-primary text-sm font-medium'>
-              Hidrografie
-            </label>
-          </div>
-        </DropdownMenuCheckboxItem>
-        {/*<DropdownMenuCheckboxItem
-          checked={layers.includes('relief')}
-          onCheckedChange={(checked) => {
-            setLayers(
-              checked
-                ? [...layers, 'relief']
-                : layers.filter((layer) => layer !== 'relief')
-            );
-          }}
-        >
-          <div className='flex items-center justify-start gap-2'>
-            <i className='fa fa-mountain text-primary text-lg'></i>
-            <label className='text-primary text-sm font-medium'>Relief</label>
-          </div>
-        </DropdownMenuCheckboxItem>*/}
-        {/*<DropdownMenuCheckboxItem
-          checked={layers.includes('placi tectonice')}
-          onCheckedChange={(checked) => {
-            setLayers(
-              checked
-                ? [...layers, 'placi tectonice']
-                : layers.filter((layer) => layer !== 'placi tectonice')
-            );
-          }}
-        >
-          <div className='flex items-center justify-start gap-2'>
-            <i className='fa fa-earth text-primary text-lg'></i>
-            <label className='text-primary text-sm font-medium'>
-              Placi tectonice
-            </label>
-          </div>
-        </DropdownMenuCheckboxItem>*/}
+        {layers.map((layer, index) => (
+          <DropdownMenuCheckboxItem
+            key={index}
+            checked={selectedLayers.includes(layer.key)}
+            onCheckedChange={(checked) => {
+              setSelectedLayers(
+                checked
+                  ? [...selectedLayers, layer.key]
+                  : selectedLayers.filter((l) => l !== layer.key)
+              );
+            }}
+          >
+            <div className='flex items-center justify-start gap-2'>
+              <i className={`${layer.icon} text-lg text-primary`} />
+              <label className='text-sm font-medium text-primary'>
+                {layer.name}
+              </label>
+            </div>
+          </DropdownMenuCheckboxItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );

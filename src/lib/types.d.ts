@@ -24,3 +24,16 @@ export type Category =
         title: string;
       }[];
     };
+
+export interface MapModel {
+  name: string;
+  icon: string;
+  image: string;
+  key: string;
+}
+
+export interface LayerModel {
+  name: string;
+  icon: string;
+  key: string;
+}
