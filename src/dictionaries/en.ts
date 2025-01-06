@@ -1592,3 +1592,6 @@ export const layers: Record<string, string> = {
 export const mapsName = 'Maps';
 
 export const layersName = 'Layers';
+
+export const showMore = 'Show more';
+export const showLess = 'Show less';

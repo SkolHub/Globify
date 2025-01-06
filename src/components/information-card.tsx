@@ -1,3 +1,4 @@
+import { useDictionary } from '@/dictionaries/use-dictionary';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
 
@@ -15,6 +16,7 @@ export default function InformationCard({
   border?: boolean;
 }) {
   const [expanded, setExpanded] = useState(false);
+  const dictionary = useDictionary();
 
   return (
     <div
@@ -24,7 +26,7 @@ export default function InformationCard({
       )}
     >
       <i className={cn('fa pb-2 text-3xl text-neutral-300', `fa-${icon}`)}></i>
-      <h3 className='pb-1 text-sm font-semibold leading-tight text-neutral-300'>
+      <h3 className='pb-1 text-center text-sm font-semibold leading-tight text-neutral-300'>
         {title}
       </h3>
       <p
@@ -41,7 +43,7 @@ export default function InformationCard({
             onClick={() => setExpanded(!expanded)}
             className='text-sm font-semibold text-neutral-400 hover:underline'
           >
-            Vezi mai mult
+            {dictionary.showMore}
           </button>
         )}
       </p>
@@ -50,7 +52,7 @@ export default function InformationCard({
           onClick={() => setExpanded(!expanded)}
           className='text-sm font-semibold text-neutral-400 hover:underline'
         >
-          Vezi mai puțin
+          {dictionary.showLess}
         </button>
       )}
     </div>

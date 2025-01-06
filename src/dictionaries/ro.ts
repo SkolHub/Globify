@@ -1592,3 +1592,6 @@ export const layers: Record<string, string> = {
 export const mapsName = 'Hărți';
 
 export const layersName = 'Straturi';
+
+export const showMore = 'Vezi mai mult';
+export const showLess = 'Vezi mai puțin';
