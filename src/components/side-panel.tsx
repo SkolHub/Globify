@@ -14,7 +14,7 @@ export default function ({
   return (
     <div
       className={cn(
-        'fixed right-auto top-[25rem] mx-2 flex h-[calc(100%-25rem)] flex-col rounded-b-none rounded-t-3xl bg-[#2E2E2E]/70 shadow-[0_0_20px_-6px_rgba(0,0,0,0.25)] backdrop-blur-2xl transition-transform duration-200 md:right-0 md:top-4 md:mx-4 md:h-[calc(100%-2rem)] md:w-auto md:flex-row md:rounded-3xl',
+        'fixed right-auto top-[20rem] mx-2 flex h-[calc(100%-20rem)] flex-col rounded-b-none rounded-t-3xl bg-[#2E2E2E]/70 shadow-[0_0_20px_-6px_rgba(0,0,0,0.25)] backdrop-blur-2xl transition-transform duration-200 md:right-0 md:top-4 md:mx-4 md:h-[calc(100%-2rem)] md:w-auto md:flex-row md:rounded-3xl',
         open
           ? 'translate-y-0 md:translate-x-0'
           : 'translate-x-0 translate-y-[200%] md:translate-x-[200%] md:translate-y-0'
@@ -32,11 +32,11 @@ export default function ({
         </span>
       </div>
       <div className='w-full overflow-y-auto px-4 pb-8 md:w-[550px] md:pt-8'>
-        <h1 className='pb-1 text-3xl font-black text-neutral-300 md:text-4xl'>
+        <h1 className='pb-1 text-2xl font-black text-neutral-300 md:text-4xl'>
           {data.title}
         </h1>
         {data.subtitle && (
-          <h2 className={`text-2xl font-bold text-neutral-300 md:text-3xl`}>
+          <h2 className={`text-xl font-bold text-neutral-300 md:text-3xl`}>
             {data.subtitle}
           </h2>
         )}
@@ -44,10 +44,10 @@ export default function ({
           if (category['content-type'] === 'text') {
             return (
               <div key={index} className='mt-4'>
-                <h3 className='text-xl font-black text-neutral-300 md:text-2xl'>
+                <h3 className='text-lg font-black text-neutral-300 md:text-2xl'>
                   {category.title}
                 </h3>
-                <p className='pt-4 text-base font-semibold text-neutral-300'>
+                <p className='pt-4 text-sm font-semibold text-neutral-300 md:text-base'>
                   {category.text}
                 </p>
                 <div className='flex flex-wrap pt-4'>
@@ -59,7 +59,7 @@ export default function ({
                         className='w-full rounded-2xl'
                       />
                       {photo?.title && (
-                        <label className='text-sm font-semibold text-neutral-400'>
+                        <label className='text-xs md:text-sm font-semibold text-neutral-400'>
                           {photo.title}
                         </label>
                       )}
@@ -71,7 +71,7 @@ export default function ({
           }
           return (
             <div key={index} className='mt-4 flex flex-col gap-4'>
-              <h3 className='text-2xl font-black text-neutral-300'>
+              <h3 className='text-lg font-black text-neutral-300 md:text-2xl'>
                 {category.title}
               </h3>
               <div className='grid grid-cols-2 gap-y-8'>

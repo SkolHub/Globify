@@ -26,12 +26,12 @@ export default function InformationCard({
       )}
     >
       <i className={cn('fa pb-2 text-3xl text-neutral-300', `fa-${icon}`)}></i>
-      <h3 className='pb-1 text-center text-sm font-semibold leading-tight text-neutral-300'>
+      <h3 className='pb-1 text-center text-xs font-semibold leading-tight text-neutral-300 md:text-sm'>
         {title}
       </h3>
       <p
         className={cn(
-          'text-center text-base font-semibold leading-tight text-neutral-300',
+          'text-center text-sm font-semibold leading-tight text-neutral-300 md:text-base',
           textClassName
         )}
       >
