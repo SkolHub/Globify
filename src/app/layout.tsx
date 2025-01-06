@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   description: 'The best geography tool'
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children
 }: Readonly<{
   children: ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html>
       <body className={`${eudoxus.className} bg-black`}>{children}</body>
     </html>
   );

@@ -1576,3 +1576,19 @@ export {
   gange,
   yangtze
 };
+
+export const maps: Record<string, string> = {
+  default: 'Default',
+  night: 'Noapte',
+  moon: 'Lună'
+};
+
+export const layers: Record<string, string> = {
+  vegetation: 'Vegetație',
+  climate: 'Climă',
+  hydrography: 'Hidrografie'
+};
+
+export const mapsName = 'Hărți';
+
+export const layersName = 'Straturi';

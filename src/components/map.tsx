@@ -1,11 +1,11 @@
 import Globe from 'react-globe.gl';
-import useResizeHook from '@/lib/hooks/useResizeHook';
+import useResizeHook from '@/lib/hooks/use-resize-hook';
 import fauna from '@/lib/data/fauna-zones.json';
 import climate from '@/lib/data/climate-zones.json';
-import hidrografie from '@/lib/data/rivers.json';
+import hydrography from '@/lib/data/rivers.json';
 import { useState } from 'react';
-import { dataFauna, dataFluvii } from '../../data';
 import { maps } from '@/lib/data/maps';
+import { useDictionary } from '@/dictionaries/use-dictionary';
 
 export default function ({
   selectedLayers,
@@ -18,6 +18,8 @@ export default function ({
   setData: (data: any) => void;
   setOpen: (value: boolean) => void;
 }) {
+  const dictionary = useDictionary();
+
   const [width, height] = useResizeHook();
 
   const [hoveredP, setHoveredP] = useState<object | null>(null);
@@ -28,7 +30,7 @@ export default function ({
           ...(selectedLayers.includes('vegetation') ? (fauna as any[]) : []),
           ...(selectedLayers.includes('climate') ? (climate as any[]) : []),
           ...(selectedLayers.includes('hydrography')
-            ? (hidrografie as any[])
+            ? (hydrography as any[])
             : [])
         ]
       : [];
@@ -58,9 +60,9 @@ export default function ({
       height={height}
       onPolygonClick={(pol: any) => {
         if (pol.properties.elevation === 0.03) {
-          setData(dataFluvii[pol.properties.index]);
+          setData(dictionary.dataFluvii[pol.properties.index]);
         } else {
-          setData(dataFauna[pol.properties.index]);
+          setData(dictionary.dataFauna[pol.properties.index]);
         }
         setOpen(true);
       }}
